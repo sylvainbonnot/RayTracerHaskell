@@ -28,15 +28,15 @@ trajectory2 counter c clr env proj =
 
 main = do
 	
-	let grav = RTCTuple.vector 0.0 (0.0) 0.0 
-	let wind = RTCTuple.vector (0.0) 0.0 0.0 
+	let grav = RTCTuple.vector 0.0 (-0.1) 0.0 
+	let wind = RTCTuple.vector (-0.01) 0.0 0.0 
 	let pos  = RTCTuple.point 0.0 1.0 0.0 
-	let vel  = RTCTuple.mults (RTCTuple.norm (RTCTuple.vector 1.0 0.0 0.0)) 5.0 
-	let c    = Canvas.createCanvas 20 10 
+	let vel  = RTCTuple.mults (RTCTuple.norm (RTCTuple.vector 1.0 1.8 0.0)) 11.25
+	let c    = Canvas.createCanvas 900 550 
 	let clr  = Color (1.0, 0.7, 0.7)
 	let env = Environment { gravity= grav, wind = wind}
 	let proj = Projectile { position = pos, velocity=vel}
-	let ppm  = ppmFromCanvas (trajectory2 1 c clr env proj) 
+	let ppm  = ppmFromCanvas (trajectory c clr env proj) 
 	let filename = "02-trajectory.ppm" 
 	writeFile filename ppm
 	putStrLn "successfully written"

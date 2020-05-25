@@ -20,9 +20,14 @@ width (Canvas m) = 1 + fst ( snd (bounds m))
 height :: Canvas -> Int
 height (Canvas m) = 1 + snd ( snd (bounds m))
 
+transpose :: Array (Int,Int) a -> Array (Int,Int) a
+transpose arr = ixmap (swap lo, swap hi) swap arr 
+    where swap (r,c) = (c,r)
+          (lo, hi) = bounds arr
+
 
 allPixels :: Canvas -> [Color]
-allPixels (Canvas m) = elems m
+allPixels (Canvas m) = elems (transpose m)
 
 
 pixelAt :: Canvas -> Int -> Int -> Color
@@ -52,8 +57,10 @@ group n xs =
   let (xs0,xs1) = splitAt n xs
   in  xs0 : group n xs1
 
+
+
 pixelData :: Canvas -> [String]
-pixelData c = map unwords ( group (3*(width c)) $ concat [  map ((show . (clamp 255)) . ($ p)) [red, green, blue] | p <- allPixels c])
+pixelData c = map unwords ( group (15) $ concat [  map ((show . (clamp 255)) . ($ p)) [red, green, blue] | p <- allPixels c])
 
 setAllPixelsTo :: Canvas -> Color -> Canvas
 setAllPixelsTo (Canvas m) cl = Canvas (m // [ (i, cl) | i <- indices m])
