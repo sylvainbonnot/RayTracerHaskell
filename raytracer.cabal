@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: f32686fa5bd02584310273f0052bd1404a943f68f62898e542eb3881cfc64d9e
+-- hash: 626722314efd779521bef827c170ca435f9db62277fcc6cdb338d2cdda40c2f3
 
 name:           raytracer
 version:        0.1.0.0
@@ -33,6 +33,7 @@ library
       Matrix
       Projectile
       RTCTuple
+      Transform
   other-modules:
       Paths_raytracer
   hs-source-dirs:
@@ -64,6 +65,7 @@ test-suite raytracer-test
       MatrixSpec
       ProjectileSpec
       RTCTupleSpec
+      TransformSpec
       Paths_raytracer
   hs-source-dirs:
       test

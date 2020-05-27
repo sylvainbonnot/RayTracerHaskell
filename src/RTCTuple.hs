@@ -12,7 +12,14 @@ tupleToList a = [x a, y a, z a, w a]
 build :: (Floating a)=> a -> a-> a-> a -> RTCTuple a
 build x y z w = RTCTuple {x = x, y=y, z=z, w=w}
 
-point :: (Floating a) => a -> a -> a -> RTCTuple a
+approxEq::Float-> Float -> Bool
+approxEq x x' = abs (x-x') < epsilon
+
+equal::RTCTuple Float-> RTCTuple Float-> Bool
+equal t t' = and [approxEq (x t) (x t'), approxEq (y t) (y t'), approxEq (z t) (z t'), 
+             approxEq (w t) (w t')]
+
+point:: (Floating a) => a -> a -> a -> RTCTuple a
 point x y z = build x y z 1.0
 
 vector :: (Floating a) => a -> a -> a -> RTCTuple a
