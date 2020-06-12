@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a384a429e96e7b839566e887396fd3b9a65ee74433e07f883c0b6bd1d229e34c
+-- hash: f0ddf45205878fcce8540a206d5618d88686f41e825db27778973f75d9474fdb
 
 name:           raytracer
 version:        0.1.0.0
@@ -29,11 +29,15 @@ library
   exposed-modules:
       Canvas
       Color
+      Intersection
       Lib
+      Light
+      Material
       Matrix
       Projectile
       Ray
       RTCTuple
+      Sphere
       Transform
   other-modules:
       Paths_raytracer
@@ -63,10 +67,14 @@ test-suite raytracer-test
   other-modules:
       CanvasSpec
       ColorSpec
+      IntersectionSpec
+      LightSpec
+      MaterialSpec
       MatrixSpec
       ProjectileSpec
       RaySpec
       RTCTupleSpec
+      SphereSpec
       TransformSpec
       Paths_raytracer
   hs-source-dirs:

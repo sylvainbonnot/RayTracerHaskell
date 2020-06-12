@@ -5,6 +5,7 @@ module Color (
     ,blue
     ,mults
     ,mult
+    , black
     
 ) where
 
@@ -32,9 +33,10 @@ green (Color t) = second t
 blue :: Color -> Float
 blue (Color t) = third t
 
-
+black::Color
 black = Color (0.0, 0.0, 0.0)
 
+white::Color
 white = Color (1.0, 1.0, 1.0)
 
 colorToList::Color -> [Float]

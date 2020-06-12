@@ -156,3 +156,23 @@ spec = do
         cross a  b `shouldBe` vector (-1) 2 (-1)
       it "b ⨯ a = vector(1, -2, 1)" $
         cross b  a `shouldBe` vector 1 (-2) 1
+
+
+  describe "Reflecting a vector approaching at 45 degrees" $ do
+    
+      let v = vector 1.0 (-1.0) 0.0
+      let n = vector 0.0 1.0 0.0
+      let expected = vector 1.0 1.0 0.0
+      let r = reflect v n
+      it "reflect(v,n) = expected" $
+        RTCTuple.equal r expected `shouldBe` True
+
+  describe "Reflecting a vector off a slanted surface" $ do
+    
+      let v = vector 0.0 (-1.0) 0.0
+      let a = (sqrt 2.0)/2.0
+      let n = vector a a 0.0
+      let expected = vector 1.0 0.0 0.0
+      let r = reflect v n
+      it "reflect(v,n) = expected" $
+        RTCTuple.equal r expected `shouldBe` True
