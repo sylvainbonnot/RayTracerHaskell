@@ -1,9 +1,4 @@
- # Table of Contents
-<div class="toc" style="margin-top: 1em;"><ul class="toc-item" id="toc-level0"><li><span><a href="http://localhost:8888/notebooks/Dropbox/Prepared/RayTracer/HaskellVersion/raytracer/README.md#A-ray-tracer-from-scratch,-in-Haskell" data-toc-modified-id="A-ray-tracer-from-scratch,-in-Haskell-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>A ray tracer from scratch, in Haskell</a></span><ul class="toc-item"><li><span><a href="http://localhost:8888/notebooks/Dropbox/Prepared/RayTracer/HaskellVersion/raytracer/README.md#Tuples,-Points-and-Vectors" data-toc-modified-id="Tuples,-Points-and-Vectors-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Tuples, Points and Vectors</a></span></li><li><span><a href="http://localhost:8888/notebooks/Dropbox/Prepared/RayTracer/HaskellVersion/raytracer/README.md#Drawing-on-a-canvas" data-toc-modified-id="Drawing-on-a-canvas-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Drawing on a canvas</a></span></li><li><span><a href="http://localhost:8888/notebooks/Dropbox/Prepared/RayTracer/HaskellVersion/raytracer/README.md#Matrices" data-toc-modified-id="Matrices-1.3"><span class="toc-item-num">1.3&nbsp;&nbsp;</span>Matrices</a></span></li><li><span><a href="http://localhost:8888/notebooks/Dropbox/Prepared/RayTracer/HaskellVersion/raytracer/README.md#Matrix-transformations" data-toc-modified-id="Matrix-transformations-1.4"><span class="toc-item-num">1.4&nbsp;&nbsp;</span>Matrix transformations</a></span></li></ul></li></ul></div>
-
-
-
-
+ 
 
 # A ray tracer from scratch, in Haskell
 
